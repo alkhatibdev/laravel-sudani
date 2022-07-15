@@ -6,7 +6,7 @@
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
 # Introduction
-Laravel Sudani is Sudani SPay API integration with Laravel, made to simplify the the process and API calls and let developers focus on other integration parts and logic. See also [Laravel Zain](https://github.com/alkhatibdev/laravel-zain).
+Laravel Sudani is Sudani SPay API integration with Laravel, made to simplify the process and API calls and let developers focus on other integration parts and logic. See also [Laravel Zain](https://github.com/alkhatibdev/laravel-zain).
 
 # Installation
 
@@ -44,7 +44,7 @@ return [
 
     'password' => env('SUDANI_PASSWORD'),
 
-    'enable_logging' => true,
+    'enable_logging' => false,
 
 ];
 ```
@@ -101,13 +101,13 @@ $response = Sudani::unsubscribe($phone)
 ## Login and Cache SPay token
 
 Out of the box the package will encrypt the password and login automatically and get the `token` and use it for each action `initiate`, `verify` ..etc per request.
-If you want cache the token and use it for furthor requests of whole day, you request `token` like this:
+If you want to cache the token and use it for furthor requests, you can request `token` like this:
 
 ```php
 $token = Sudani::token()
 ```
 
-And you can cache it and use for next requests for the next 24 hours, for example:
+And you can cache it and use it for each request for the next 24 hours, for example:
 
 ```php
 // $token = getCachedToken()
