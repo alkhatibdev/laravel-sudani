@@ -32,8 +32,10 @@
         "laravel": {
             "providers": [
                 "AlkhatibDev\\LaravelSudani\\LaravelSudaniServiceProvider"
-            ]
-
+            ],
+            "aliases":{
+                "Sudani": "AlkhatibDev\\LaravelSudani\\Facades\\Sudani"
+            }
         }
     }
 }
