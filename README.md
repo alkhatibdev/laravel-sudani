@@ -3,6 +3,7 @@
 # Sudani SPay API integration with Laravel
 
 [![Latest Version](https://img.shields.io/github/release/alkhatibdev/laravel-sudani.svg?style=flat-square)](https://github.com/alkhatibdev/laravel-sudani/releases)
+![Packagist Downloads (custom server)](https://img.shields.io/packagist/dt/alkhatibdev/laravel-sudani)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
 # Introduction
