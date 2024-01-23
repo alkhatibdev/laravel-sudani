@@ -50,7 +50,7 @@ return [
 ];
 ```
 
-Don't forget to set all these variable on your `.env` file
+Don't forget to set all these variables on your `.env` file
 
 ```env
 SUDANI_SERVER_BASE_API_URL=http://196.1.241.110/SPayAPI/Service/
@@ -71,7 +71,7 @@ use AlkhatibDev\LaravelSudani\Facades\Sudani;
 $response = Sudani::initiate($phone)
 ```
 
-When `initiate` payment request successfully sent, a SMS with `OTP` code will be send to the `$phone` number, and `$response` will contain a `requestId` and you should save it to the next step `verify`.
+When the `initiate` payment request is successfully sent, an SMS with an `OTP` code will be sent to the `$phone` number, and `$response` will contain a `requestId` and you should save it to the next step `verify`.
 
 ## Verify Payment/Subscription
 
@@ -95,14 +95,12 @@ $response = Sudani::checkSubscription($phone)
 
 $response = Sudani::unsubscribe($phone)
 
-// cacheToken($response['token'])
-
 ```
 
 ## Login and Cache SPay token
 
-Out of the box the package will encrypt the password and login automatically and get the `token` and use it for each action `initiate`, `verify` ..etc per request.
-If you want to cache the token and use it for furthor requests, you can request `token` like this:
+Out of the box, the package will encrypt the password and login automatically and get the `token` and use it for each action `initiate`, `verify` ..etc per request.
+If you want to cache the token and use it for further requests, you can request a `token` like this:
 
 ```php
 $token = Sudani::token()
@@ -119,7 +117,7 @@ $response = Sudani::withToken($token)->verify($phone)
 ```
 
 ## Logging
-You can enable logging from package config file 
+You can enable logging from the package config file 
 
 ```
 'enable_logging' => true,
